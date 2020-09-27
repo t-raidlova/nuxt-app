@@ -68,7 +68,7 @@ import { mapState } from "vuex";
 
 export default {
   components: {
-    AppToast,
+    AppToast
   },
   data() {
     return {
@@ -77,7 +77,7 @@ export default {
       itemOptions: "",
       itemAddons: [],
       itemSizeAndCost: [],
-      cartSubmitted: false,
+      cartSubmitted: false
     };
   },
   computed: {
@@ -99,7 +99,7 @@ export default {
     combinedPrice() {
       let total = this.count * this.currentItem.price;
       return total.toFixed(2);
-    },
+    }
   },
   methods: {
     addToCart() {
@@ -108,11 +108,12 @@ export default {
         count: this.count,
         options: this.itemOptions,
         addOns: this.itemAddons,
-        combinedPrice: this.combinedPrice,
+        combinedPrice: this.combinedPrice
       };
       this.cartSubmitted = true;
-    },
-  },
+      this.$store.commit("addToCart", formOutput);
+    }
+  }
 };
 </script>
 
