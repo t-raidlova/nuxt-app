@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>copyright</p>
+    <p></p>
   </footer>
 </template>
 
