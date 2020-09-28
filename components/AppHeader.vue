@@ -3,9 +3,9 @@
     <h1>
       Nuxt food app
     </h1>
-    <button>
-      See restaurants >
-    </button>
+    <nuxt-link to="/restaurants">
+      <button>See Restaurants</button>
+    </nuxt-link>
   </section>
 </template>
 
@@ -15,16 +15,20 @@ export default {};
 
 <style lang="scss" scoped>
 .masthead {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 100%;
-  height: 80vh;
+  height: 75vh;
   padding: 3rem;
   overflow: hidden;
   background-size: cover !important;
   background: radial-gradient(
       ellipse at center,
-      rgba(0, 0, 0, 0) 0%,
+      #3a0b5054 10%,
       rgba(0, 0, 0, 0) 59%,
-      rgba(0, 0, 0, 0.65) 100%
+      #21d5fd4b 100%
     ),
     url(../assets/headerimg.jpg) no-repeat center center scroll;
 }
@@ -33,7 +37,7 @@ h1 {
   font-style: normal;
   font-weight: bold;
 
-  color: #eee;
+  color: rgb(255, 255, 255);
   font-size: 8vmin;
   letter-spacing: 0.03em;
   line-height: 1;
